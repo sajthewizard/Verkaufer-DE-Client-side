@@ -5,7 +5,7 @@ const Blog = () => {
         <div className='mx-8'>
             <div className="collapse">
                 <input type="checkbox" className="peer" />
-                <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+                <div className="text-2xl collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
                     What are the different ways to manage a state in a React application?
                 </div>
                 <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
@@ -22,7 +22,7 @@ const Blog = () => {
             </div>
             <div className="collapse">
                 <input type="checkbox" className="peer" />
-                <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+                <div className="text-2xl collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
                     How does prototypical inheritance work?
                 </div>
                 <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
@@ -31,7 +31,7 @@ const Blog = () => {
             </div>
             <div className="collapse">
                 <input type="checkbox" className="peer" />
-                <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+                <div className="text-2xl collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
                     What is a unit test? Why should we write unit tests?
                 </div>
                 <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
@@ -41,7 +41,7 @@ const Blog = () => {
                 </div>
             </div><div className="collapse">
                 <input type="checkbox" className="peer" />
-                <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+                <div className="text-2xl collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
                     React vs. Angular vs. Vue
                 </div>
                 <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">

@@ -38,7 +38,7 @@ const Design = () => {
                 <h1 className='text-3xl text-center mt-5 text-dark'>Feedbacks of our Customers</h1>
 
             </div>
-            <div className='flex lg:flex-col-3 gap-4 mt-4'>
+            <div className='flex lg:flex-col-3 gap-4 my-4 mx-8'>
                 {
                     testimonials.map(testimonial => <Testimonial
                         testimonial={testimonial}
