@@ -1,0 +1,59 @@
+[
+    {
+        "type": "Cars",
+        "products": [
+            {
+                "name": "Toyota Corolla",
+                "price": "12500",
+                "condition": "Good",
+                "location": "Dhaka",
+                "img": "https://img.ebay-kleinanzeigen.de/api/v1/prod-ads/images/7b/7bf458c1-a9cf-4b50-b18f-28403c93d698?rule=$_35.JPG"
+            },
+            {
+                "name": "Ferrari",
+                "price": "512500",
+                "condition": "Good",
+                "location": "Dhaka",
+                "img": "https://cdn.motor1.com/images/mgl/JOOZL6/s1/ferrari-sf90-by-mansory.jpg"
+            }
+        ]
+    },
+    {
+        "type": "Cycles",
+        "products": [
+            {
+                "name": "Phoenix 20",
+                "price": "2500",
+                "condition": "Okay",
+                "location": "Dhaka",
+                "img": "https://i.pinimg.com/736x/4a/63/98/4a6398b8ac9f7d298380ee78ce6a3749--phoenix-motorcycles.jpg"
+            },
+            {
+                "name": "Phoenix",
+                "price": "1250",
+                "condition": "Very Good",
+                "location": "Dhaka",
+                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU4Irst4W9Od9UfNu3sYzEUNGKkJt-uQauvfSwR2zpJL1OaaeR53I9IlJhN9cj8zcWKUg&usqp=CAU"
+            }
+        ]
+    },
+    {
+        "type": "Trucks",
+        "products": [
+            {
+                "name": "Maruti",
+                "price": "32500",
+                "condition": "Okayish",
+                "location": "Dhaka",
+                "img": "https://www.tatamotors.com/wp-content/uploads/2020/08/icv-truck.jpg"
+            },
+            {
+                "name": "Tata",
+                "price": "72500",
+                "condition": "Repairable",
+                "location": "Dhaka",
+                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSOViqGXBGo2MkJXnEK0b3rIGPyLcKfWcxjQ&usqp=CAU"
+            }
+        ]
+    }
+]
