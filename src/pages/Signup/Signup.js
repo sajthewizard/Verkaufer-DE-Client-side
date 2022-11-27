@@ -1,9 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Signup = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
 
     const handlesignup = event => {
         event.preventDefault();
@@ -11,13 +14,24 @@ const Signup = () => {
         const email = form.email.value;
         const name = form.name.value;
         const password = form.password.value;
+        const photoUrl = form.photoUrl.value;
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                const userInfo = {
+                    displayName: name,
+                    photoURL: photoUrl,
+                }
+                updateUser(userInfo)
+                    .then(() => { })
+                    .catch(err => console.log(err));
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error);
+                navigate(from, { replace: true });
+
 
             });
 
@@ -37,6 +51,12 @@ const Signup = () => {
                                 </label>
                                 <input name="name" type="text" placeholder="name" className="input input-bordered" required />
                             </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">PhotoURL</span>
+                                </label>
+                                <input name="photoUrl" type="text" placeholder="PhotoURL" className="input input-bordered" required />
+                            </div>
 
                             <div className="form-control">
                                 <label className="label">
@@ -52,12 +72,12 @@ const Signup = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Login" />
+                                <input className="btn btn-primary" type="submit" value="SignUp" />
 
                             </div>
 
 
-                            <p>Already have an Account? <Link className='text-primary' to="/login"> Sign Up</Link></p>
+                            <p>Already have an Account? <Link className='text-primary' to="/login"> Login</Link></p>
                         </div>
 
 
