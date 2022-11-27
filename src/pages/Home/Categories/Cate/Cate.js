@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../../Contexts/AuthProvider';
 
-const Cate = ({ product }) => {
+const Cate = ({ product, setProduct }) => {
     const { user } = useContext(AuthContext);
-    console.log(user);
+
 
     const { condition, name, img, location, price } = product;
 
-    console.log(product)
+
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <div>
@@ -29,7 +29,7 @@ const Cate = ({ product }) => {
 
 
                     </div>
-                    <button className="btn">Book Now</button>
+                    <label onClick={() => setProduct(product)} htmlFor="booking" className="btn ">Book Now</label>
                 </div>
             </div>
         </div>
