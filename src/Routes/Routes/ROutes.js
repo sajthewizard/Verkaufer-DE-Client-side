@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Link } from "react-router-dom";
 import Main from "../../LAyout/MAin/Main";
 import Blog from "../../pages/Blog/Blog";
 import Dashboard from "../../pages/Dashboard/Dashboard/Dashboard";
@@ -41,8 +41,8 @@ const router = createBrowserRouter([
     {
         path: '*', element:
             <div className="text-5xl text-center text-error-content my-36">
-                <h1>404! Check and try again</h1>
-                <img className="mx-auto" src={"https://aweos.de/wp-content/uploads/2020/12/404-not-found.png"} alt="" />
+                <h1> Ohhho! We couldn't find the page! Return to <button className="btn text-4xl"><Link to="/">Home</Link></button> </h1>
+                <img className="mx-auto mt-4" src={"https://www.sumydesigns.com/wp-content/uploads/2019/03/404-error.jpg"} alt="" />
 
             </div>
 
