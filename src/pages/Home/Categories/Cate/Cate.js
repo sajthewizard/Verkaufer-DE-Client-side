@@ -19,7 +19,7 @@ const Cate = ({ product }) => {
                         {name}
                         <div className="badge badge-secondary my-2">Condition: {condition}</div>
                     </h2>
-                    <p>Seller: {user.email}</p>
+                    <p>Seller: </p>
                     <p>Posted:</p>
 
                     <div className="card-actions justify-end my-2">

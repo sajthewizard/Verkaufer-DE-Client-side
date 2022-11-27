@@ -8,6 +8,7 @@ import Login from "../../pages/Login/Login";
 import Signup from "../../pages/Signup/Signup";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -37,6 +38,14 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
     },
-    { path: '*', element: <div className="text-5xl text-center text-error-content my-36"> <h1>404! Check and try again</h1></div> }
+    {
+        path: '*', element:
+            <div className="text-5xl text-center text-error-content my-36">
+                <h1>404! Check and try again</h1>
+                <img className="mx-auto" src={"https://aweos.de/wp-content/uploads/2020/12/404-not-found.png"} alt="" />
+
+            </div>
+
+    }
 ])
 export default router;
