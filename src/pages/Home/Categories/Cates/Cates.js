@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import BookingModal from '../../../BookingModal/BookingModal';
 import Cate from '../Cate/Cate';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Cates = () => {
+    const notify = () => toast("Booking Confirmed!");
     const { products, type } = useLoaderData();
     const [product, setProduct] = useState(null);
 
@@ -32,8 +36,10 @@ const Cates = () => {
             {product &&
                 <BookingModal product={product}
                     setProduct={setProduct}
+                    notify={notify}
                 ></BookingModal>
             }
+            <ToastContainer />
         </div>
 
     );
