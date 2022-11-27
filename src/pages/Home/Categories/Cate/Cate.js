@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../../Contexts/AuthProvider';
 
 const Cate = ({ product, setProduct }) => {
-    const { user } = useContext(AuthContext);
+
 
 
     const { condition, name, img, location, price } = product;

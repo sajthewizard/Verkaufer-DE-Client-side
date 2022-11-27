@@ -2,22 +2,44 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const BookingModal = ({ product, setProduct, notify }) => {
-
+    const { user } = useContext(AuthContext);
+    const buyer = user.displayName;
+    const email = user.email;
+    const { name, price, location, condition, img } = product;
     const handleBooking = event => {
         event.preventDefault();
 
         const form = event.target;
-        const location = form.location.value;
+        const meeting = form.meeting.value;
         const phone = form.phone.value;
-        notify();
+        const booking = {
+            meeting,
+            phone, name, price, location, condition, img, buyer, email
 
-        setProduct(null);
+        }
+
+
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setProduct(null);
+                notify();
+            })
+
 
 
     }
-    const { user } = useContext(AuthContext);
 
-    const { name, price } = product;
+
+
     return (
         <div>
             <input type="checkbox" id="booking" className="modal-toggle" />
@@ -30,7 +52,7 @@ const BookingModal = ({ product, setProduct, notify }) => {
                     <p>Email: {user.email} </p>
                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-2 '>
                         <input name="phone" type="text" placeholder="Phone Number" className="input input-bordered w-full " required />
-                        <input name="location" type="text" placeholder="Meeting Place" className="input input-bordered w-full " required />
+                        <input name="meeting" type="text" placeholder="Meeting Place" className="input input-bordered w-full " required />
                         <input type="submit" value="Submit" className=" btn btn-warning w-full " />
 
                     </form>
