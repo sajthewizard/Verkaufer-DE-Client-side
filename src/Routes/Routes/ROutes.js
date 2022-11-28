@@ -9,8 +9,10 @@ import MyOrders from "../../pages/DashboardLAyout/MyOrders/MyOrders";
 import Cates from "../../pages/Home/Categories/Cates/Cates";
 import Home from "../../pages/Home/Home/Home";
 import Login from "../../pages/Login/Login";
+import MyProducts from "../../pages/MyProducts/MyProducts";
 import Signup from "../../pages/Signup/Signup";
 import AdminRoute from "../AdminRoutes/AdminRoutes";
+import BuyerRoute from "../BuyerRoutes/BuyerRoutes";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import SellerRoute from "../SellerRoutes/SellerRoutes";
 
@@ -45,15 +47,21 @@ const router = createBrowserRouter([
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
             {
-                path: '/dashboard',
-                element: <MyOrders></MyOrders>
+                path: '/dashboard/myorders',
+                element: <BuyerRoute><MyOrders></MyOrders></BuyerRoute>
             },
+
             {
                 path: '/dashboard/allusers',
                 element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-            }, {
+            },
+            {
                 path: '/dashboard/addaproduct',
                 element: <SellerRoute><AddAProduct></AddAProduct></SellerRoute>
+            },
+            {
+                path: '/dashboard/myproducts',
+                element: <SellerRoute><MyProducts></MyProducts></SellerRoute>
             }
 
         ]
