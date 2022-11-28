@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { AuthContext } from '../../Contexts/AuthProvider';
 
 const AddAProduct = () => {
+    const { user } = useContext(AuthContext)
     const navigate = useNavigate();
     const notify = () => toast("Product Added!");
     const handleProducts = event => {
@@ -18,6 +20,7 @@ const AddAProduct = () => {
         const category = form.condition.value;
         const info = form.info.value;
         const time = form.phone.value;
+        const email = user.email;
         const data = {
             name,
             price,
@@ -27,7 +30,8 @@ const AddAProduct = () => {
             location,
             category,
             info,
-            time
+            time,
+            email
         }
         fetch('http://localhost:5000/sachen', {
             method: 'POST',
