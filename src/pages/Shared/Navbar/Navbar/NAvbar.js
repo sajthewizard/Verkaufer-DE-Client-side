@@ -16,7 +16,7 @@ const NAvbar = () => {
             });
     }
     const menus = <React.Fragment>
-        <li><Link> Home </Link></li>
+        <li><Link to="/"> Home </Link></li>
         <li><Link to="/blog"> Blog</Link></li>
         {
             user?.uid ? <>
