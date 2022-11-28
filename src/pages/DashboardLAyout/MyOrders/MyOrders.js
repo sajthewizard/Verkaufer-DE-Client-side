@@ -40,7 +40,7 @@ const MyOrders = () => {
 
                         {
                             bookings.map((booking, i) =>
-                                <tr>
+                                <tr key={booking.price}>
                                     <th>{i + 1}</th>
                                     <td>{booking.name}</td>
                                     <td>{booking.price}</td>

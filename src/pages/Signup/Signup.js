@@ -45,7 +45,7 @@ const Signup = () => {
             .then(result => {
                 const user = result.user;
                 const email = user.email;
-                const name = user.name;
+                const name = user.displayName;
                 const role = 'buyer';
 
                 saveUser(name, email, role);
