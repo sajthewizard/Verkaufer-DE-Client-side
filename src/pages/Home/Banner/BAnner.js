@@ -8,7 +8,7 @@ const BAnner = () => {
                 <img src={buy} className=" rounded-lg lg:w-1/2 shadow-2xl" />
                 <div>
                     <h1 className="text-5xl font-bold">Your New Ride Is Waiting For YOU!</h1>
-                    <p className="py-6">Easiest way to get ride of old vahicles and buying the best one from other people.</p>
+                    <p className="py-6">Easiest way to get rid of old vahicles and buying the best one from other people.</p>
                     <button className="btn btn-primary">Get Started</button>
                 </div>
             </div>

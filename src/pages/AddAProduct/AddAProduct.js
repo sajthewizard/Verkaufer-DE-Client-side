@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
@@ -36,19 +36,25 @@ const AddAProduct = () => {
         fetch('http://localhost:5000/sachen', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+
             },
             body: JSON.stringify(data)
 
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data) {
+                    notify();
+                }
 
-                notify();
+
+                navigate('/dashboard/myproducts')
+
+
             })
         form.reset();
-        navigate('/dashboard/myproducts')
+
 
 
 
@@ -91,6 +97,7 @@ const AddAProduct = () => {
                             <input name="phone" type="text" placeholder="Mobile" className="input input-bordered" required />
 
                         </div>
+                        <ToastContainer />
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Location</span>
@@ -101,7 +108,7 @@ const AddAProduct = () => {
                             <label className="label">
                                 <span className="label-text">Product Category</span>
                             </label>
-                            <input name="category" type="text" placeholder="Cars/Trucks/Cycles" className="input input-bordered" required />
+                            <input name="category" type="text" placeholder=" Write according : Cars/Trucks/Cycles" className="input input-bordered" required />
 
                         </div><div className="form-control">
                             <label className="label">
@@ -129,7 +136,7 @@ const AddAProduct = () => {
 
 
             </div >
-            <ToastContainer />
+
 
 
         </div >

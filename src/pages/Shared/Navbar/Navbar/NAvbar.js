@@ -22,6 +22,8 @@ const NAvbar = () => {
             user?.uid ? <>
                 <li><button onClick={handleSignout} > Sign Out</button></li>
                 <li><Link to="/dashboard"> Dashboard</Link></li>
+
+
             </> :
                 <><li><Link to="/login"> Login</Link></li>
                     <li><Link to="/signup"> Sign Up</Link></li></>

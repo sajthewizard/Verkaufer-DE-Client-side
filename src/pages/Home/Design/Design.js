@@ -33,12 +33,12 @@ const Design = () => {
 
     ]
     return (
-        <div>
+        <div className='  justify-center'>
             <div>
                 <h1 className='text-3xl text-center mt-5 text-dark'>Feedbacks of our Customers</h1>
 
             </div>
-            <div className='flex lg:flex-col-3 gap-4 my-4 mx-8'>
+            <div className='flex justify-center sm:grid-col-1 lg:grid-col-3 gap-4 my-8 '>
                 {
                     testimonials.map(testimonial => <Testimonial
                         testimonial={testimonial}
