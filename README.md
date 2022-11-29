@@ -1,7 +1,7 @@
 
-admin: jhankar@prog.com
+adminEmail: jhankar@prog.com
 
-pass: 123456
+adminPassword: 123456
 
 live Link:
 
