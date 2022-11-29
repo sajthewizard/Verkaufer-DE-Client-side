@@ -17,7 +17,7 @@ const AddAProduct = () => {
         const photourl = form.photourl.value;
         const phone = form.phone.value;
         const location = form.location.value;
-        const category = form.condition.value;
+        const category = form.category.value;
         const info = form.info.value;
         const time = form.phone.value;
         const email = user.email;
@@ -120,20 +120,10 @@ const AddAProduct = () => {
                     </div>
 
 
-
-
                     <div className="form-control mt-6">
                         <input className="btn btn-primary" type="submit" value="Submit" />
 
                     </div>
-
-
-
-
-
-
-
-
 
                 </form>
 

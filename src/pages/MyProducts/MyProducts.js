@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
 
 const MyProducts = () => {
     const { user } = useContext(AuthContext);
-    const { data: products, isLoading } = useQuery({
+    const notify = () => toast("Product Deleted!");
+    const { data: products, isLoading, refetch } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
             try {
@@ -17,12 +19,26 @@ const MyProducts = () => {
             }
         }
     })
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/sachen/${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    notify();
+                    refetch();
+
+                }
+            })
+    }
+
     if (isLoading) {
         return <progress className="progress w-56 "></progress>
     }
     return (
         <div>
-            my products: {products.length}
+            <h1 className='3XL'>My Products</h1>
             <div className="overflow-x-auto">
                 <table className="table w-full">
 
@@ -47,7 +63,7 @@ const MyProducts = () => {
                                     <td>{product.price}</td>
                                     <td>Unsold</td>
                                     <td><button className='btn btn-xs btn-error'>Add post</button></td>
-                                    <td><button className='btn btn-xs btn-error'>Delete</button></td>
+                                    <td><button onClick={() => handleDelete(product._id)} className='btn btn-xs btn-error'>Delete</button></td>
                                 </tr>
                             )
                         }
@@ -55,6 +71,7 @@ const MyProducts = () => {
                     </tbody>
                 </table>
             </div>
+            <ToastContainer />
 
         </div>
     );
