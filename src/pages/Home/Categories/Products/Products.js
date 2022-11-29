@@ -7,7 +7,7 @@ const Products = ({ maal }) => {
 
     return (
         <div className='mx-auto my-8'>
-            <button className='btn btn-outline text-warning'> <Link to={`sachen/${name}`}>{name}</Link></button>
+            <button className='btn btn-outline text-base'> <Link to={`sachen/${name}`}>{name}</Link></button>
 
         </div>
 

@@ -21,7 +21,7 @@ const Product = () => {
         queryKey: ['products'],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000${path}`);
+                const res = await fetch(`https://verkaufer-de-server.vercel.app${path}`);
                 const data = await res.json();
                 return data;
 
@@ -47,14 +47,7 @@ const Product = () => {
                 }
 
             </div>
-            {
-                product && <BookingModal>
-                    product={product}
-                    setProduct={setProduct}
-                    notify={notify}
 
-                </BookingModal>
-            }
 
 
 

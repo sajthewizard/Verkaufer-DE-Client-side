@@ -1,3 +1,33 @@
+
+admin: jhankar@prog.com
+
+pass: 123456
+
+live Link:
+
+Project name: Verkaufer-DE
+
+
+* I have learnt more about backends
+* different type of hooks
+* more about fatching useQuery
+* backend find one
+* image conversion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

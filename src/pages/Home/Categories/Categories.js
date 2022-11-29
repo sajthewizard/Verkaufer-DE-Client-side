@@ -20,7 +20,7 @@ const Categories = () => {
     const { user } = useContext(AuthContext)
     const [jinish, setJinish] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/category')
+        fetch('https://verkaufer-de-server.vercel.app/category')
             .then(res => res.json())
             .then(data => setJinish(data))
 
@@ -41,7 +41,7 @@ const Categories = () => {
 
 
                 </div>
-                <div className=' text-center text-3xl my-8'>Products From our Customers </div>
+                <div className=' text-center text-3xl my-8'>Products From our Sellers </div>
                 <div className='flex  gap-4'>
                     {
                         maals.map(maal => <Products key={maal.id}

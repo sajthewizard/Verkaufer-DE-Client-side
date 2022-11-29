@@ -11,7 +11,7 @@ const MyProducts = () => {
         queryKey: ['products'],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000/sachenall/${user.email}`);
+                const res = await fetch(`https://verkaufer-de-server.vercel.app/sachenall/${user.email}`);
                 const data = await res.json();
                 return data;
 
@@ -21,7 +21,7 @@ const MyProducts = () => {
         }
     })
     const handleDelete = id => {
-        fetch(`http://localhost:5000/sachen/${id}`, {
+        fetch(`https://verkaufer-de-server.vercel.app/sachen/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
