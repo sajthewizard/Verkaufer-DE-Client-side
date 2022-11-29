@@ -5,12 +5,13 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const MyProducts = () => {
     const { user } = useContext(AuthContext);
+    console.log(user)
     const notify = () => toast("Product Deleted!");
     const { data: products, isLoading, refetch } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000/sachen/${user.email}`);
+                const res = await fetch(`http://localhost:5000/sachenall/${user.email}`);
                 const data = await res.json();
                 return data;
 

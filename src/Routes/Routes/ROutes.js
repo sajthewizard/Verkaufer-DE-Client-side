@@ -9,6 +9,7 @@ import DashboardLayout from "../../pages/DashboardLAyout/DashboardLayout";
 import MyOrders from "../../pages/DashboardLAyout/MyOrders/MyOrders";
 import Cates from "../../pages/Home/Categories/Cates/Cates";
 import Home from "../../pages/Home/Home/Home";
+import Product from "../../pages/Home/Product/Product";
 import Login from "../../pages/Login/Login";
 import MyProducts from "../../pages/MyProducts/MyProducts";
 import Signup from "../../pages/Signup/Signup";
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
                 path: '/category/:id',
                 element: <PrivateRoute><Cates></Cates></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+            }
+            , {
+                path: '/sachen/:name',
+                element: <PrivateRoute><Product></Product></PrivateRoute>,
+
             }
         ]
     },

@@ -10,6 +10,7 @@ const Cates = () => {
     const notify = () => toast("Booking Confirmed!");
     const { products, type } = useLoaderData();
     const [product, setProduct] = useState(null);
+    console.log(product);
 
 
     return (

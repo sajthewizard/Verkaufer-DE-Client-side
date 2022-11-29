@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const BookingModal = ({ product, setProduct, notify }) => {
+    const { name, price, location, condition, img } = product;
+    console.log(product)
     const { user } = useContext(AuthContext);
     const buyer = user.displayName;
     const email = user.email;
-    const { name, price, location, condition, img } = product;
+
     const handleBooking = event => {
         event.preventDefault();
 
