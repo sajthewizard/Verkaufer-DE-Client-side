@@ -1,9 +1,4 @@
-
-adminEmail: jhankar@prog.com
-
-adminPassword: 123456
-
-live Link:https://verkaufer-de.web.app/
+Live Link:https://verkaufer-de.web.app/
 
 Project name: Verkaufer-DE
 
