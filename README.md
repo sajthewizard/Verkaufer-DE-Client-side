@@ -3,25 +3,6 @@ Live Link:https://verkaufer-de.web.app/
 Project name: Verkaufer-DE
 
 
-* I have learnt more about backends
-* different type of hooks
-* more about fatching useQuery
-* backend find one
-* image conversion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Getting Started with Create React App
 
